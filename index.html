@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urbanism Tool Trophy Case | College Towns</title>
+<meta name="description" content="A repository for urbanism tools, apps, and services that are useful to the broader movement of building and improving our neighborhoods and cities. Curated by College Towns.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2712%27%20fill%3D%27%23161c45%27/%3E%3Cpath%20d%3D%27M18%2012h28c0%2016-6%2023-14%2024-8-1-14-8-14-24z%27%20fill%3D%27%23f2c14e%27/%3E%3Cpath%20d%3D%27M18%2016c-8%200-8%2012%202%2013M46%2016c8%200%208%2012-2%2013%27%20fill%3D%27none%27%20stroke%3D%27%23f2c14e%27%20stroke-width%3D%273%27/%3E%3Cpath%20d%3D%27M29%2036h6l1%208h-8z%27%20fill%3D%27%23f2c14e%27/%3E%3Crect%20x%3D%2721%27%20y%3D%2744%27%20width%3D%2722%27%20height%3D%278%27%20rx%3D%271%27%20fill%3D%27%23b9824a%27/%3E%3C/svg%3E">
+<meta property="og:title" content="Urbanism Tool Trophy Case | College Towns">
+<meta property="og:description" content="A repository for urbanism tools, apps, and services that are useful to the broader movement of building and improving our neighborhoods and cities. Curated by College Towns.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://urbanismtools.collegetowns.org/">
+<meta property="og:image" content="https://urbanismtools.collegetowns.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="canonical" href="https://urbanismtools.collegetowns.org/">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Private visitor counter (GoatCounter). Only the account owner can see the dashboard. -->
+<script>window.goatcounter = { path: function(p){ return location.host + p } };</script>
+<script data-goatcounter="https://collegetowns.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:Versa;src:url("data:font/woff;base64,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") format("woff");font-weight:400;font-style:normal;font-display:swap}
+  :root{
+    --navy:#161C45; --navy-2:#0F1434; --navy-3:#0B0F2A; --ink:#36475C; --muted:#6B7A8C;
+    --bg:#F1F7FD; --gold:#F2C14E;
+    --brass-1:#F6DC8E; --brass-2:#D9A93F; --brass-3:#9C7322;
+    --oak:#B9824A; --oak-dark:#7A4E26; --walnut:#4A2E18;
+    --felt:#7E1F24; --felt-2:#5E1519; --cream:#FBF6EC;
+    --green:#2D7A4F;
+    --display:Versa,"Fira Sans",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Fira Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* wood textures */
+  .oak{background-color:var(--oak);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27600%27%20height%3D%27300%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.003%200.12%27%20numOctaves%3D%274%27%20seed%3D%277%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%200.36%20%200%200%200%200%200.2%20%200%200%200%200%200.08%20%200%200%200%201.1%20-0.25%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23B9824A%27/%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27%20opacity%3D%270.75%27/%3E%3C/svg%3E");background-size:600px 300px}
+  .oak-v{background-color:var(--oak);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27300%27%20height%3D%27600%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.12%200.003%27%20numOctaves%3D%274%27%20seed%3D%2711%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%200.42%20%200%200%200%200%200.25%20%200%200%200%200%200.1%20%200%200%200%201.1%20-0.25%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23C99460%27/%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27%20opacity%3D%270.55%27/%3E%3C/svg%3E");background-size:300px 600px}
+  .walnut{background-color:var(--walnut);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27600%27%20height%3D%27300%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.003%200.14%27%20numOctaves%3D%274%27%20seed%3D%273%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%200.16%20%200%200%200%200%200.08%20%200%200%200%200%200.03%20%200%200%200%201.1%20-0.25%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%234A2E18%27/%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27%20opacity%3D%270.9%27/%3E%3C/svg%3E");background-size:600px 300px}
+
+  /* ---------- Header (matches App Locker) ---------- */
+  header.top{background:var(--navy);color:#fff;text-align:center;padding:34px 20px 22px}
+  .brand{font-family:var(--display);font-weight:400;letter-spacing:.04em;font-size:clamp(38px,6.4vw,70px);line-height:1;margin:0;text-transform:uppercase}
+  .brand a{text-decoration:none}
+  .sub{margin:12px 0 0;font-family:var(--display);letter-spacing:.3em;font-size:14px;color:rgba(255,255,255,.75);text-transform:uppercase}
+  .sub b{color:var(--gold);font-weight:400}
+  nav.cases{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+  nav.cases button{font:600 13px "Fira Sans",sans-serif;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:7px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+  nav.cases button:hover{background:rgba(255,255,255,.14)}
+  nav.cases button.on{background:#fff;color:var(--navy);border-color:#fff}
+  nav.cases button.dir{border-color:rgba(242,193,78,.55);color:var(--gold)}
+
+  .intro-bar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;padding:18px 0 4px;font-size:14px}
+  .intro-bar p{margin:0;max-width:660px}
+  .intro-bar p a{color:var(--navy);font-weight:700}
+  .powered{font-size:12px;color:var(--muted);white-space:nowrap;align-self:center}
+  .powered a{color:var(--navy);font-weight:700;text-decoration:none}
+  .powered a:hover{text-decoration:underline}
+
+  /* ---------- Cabinet (shared) ---------- */
+  .cabinet{position:relative;border-radius:6px;padding:14px;box-shadow:0 24px 40px -22px rgba(60,35,12,.75),inset 0 1px 0 rgba(255,255,255,.25),inset 0 -2px 0 rgba(0,0,0,.25)}
+  .cabinet .cornice{height:30px;margin:-14px -14px 12px;border-radius:6px 6px 0 0;border-bottom:3px solid rgba(0,0,0,.25);box-shadow:inset 0 -6px 10px -6px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+  .cabinet .cornice .tag{font:700 10px "Fira Sans",sans-serif;letter-spacing:.2em;color:#3a2410;background:linear-gradient(180deg,#e9edf2,#aab4c0);padding:2px 8px;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.4)}
+  .bay{position:relative;border-radius:3px;overflow:hidden;box-shadow:inset 0 0 0 3px rgba(60,35,12,.55),inset 0 14px 24px -10px rgba(0,0,0,.45),inset 0 -10px 18px -10px rgba(0,0,0,.4)}
+  .bay .lightwash{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 60% at 50% -8%,rgba(255,236,190,.55),transparent 70%)}
+  .bay .lightbar{position:absolute;top:0;left:8%;right:8%;height:6px;background:linear-gradient(180deg,#fffbe9,#f4dfa6);border-radius:0 0 4px 4px;box-shadow:0 0 18px 6px rgba(255,232,170,.55);z-index:3}
+  .bay .glare{position:absolute;inset:0;pointer-events:none;z-index:6;background:linear-gradient(110deg,transparent 0 30%,rgba(255,255,255,.12) 33%,transparent 38%,transparent 66%,rgba(255,255,255,.08) 69%,transparent 72%)}
+  .plinth{height:46px;margin:12px -14px -14px;border-radius:0 0 6px 6px;border-top:3px solid rgba(0,0,0,.22);display:flex;justify-content:space-between;align-items:center;padding:0 18px;font:700 11px "Fira Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(40,22,8,.85)}
+  .plinth .lock{display:inline-flex;align-items:center;gap:6px}
+  .plinth .lock::before{content:"";width:10px;height:12px;border-radius:2px;background:linear-gradient(180deg,#e9edf2,#8f9aa8)}
+
+  /* brass plate */
+  .brass{background:linear-gradient(180deg,var(--brass-1) 0%,var(--brass-2) 50%,var(--brass-3) 100%);color:#3a2a0c;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;text-align:center;border-radius:2px;box-shadow:inset 0 1px 0 rgba(255,255,255,.65),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 5px rgba(0,0,0,.4);position:relative;text-shadow:0 1px 0 rgba(255,255,255,.45)}
+  .brass::before,.brass::after{content:"";position:absolute;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff7d1,#8a6420)}
+  .brass::before{left:5px}.brass::after{right:5px}
+
+  /* felt pennant */
+  .pennant{position:relative;display:inline-block;filter:drop-shadow(0 6px 8px rgba(0,0,0,.35))}
+  .pennant span{display:block;background:linear-gradient(180deg,var(--felt),var(--felt-2));color:#F7E7C6;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;text-align:center;clip-path:polygon(0 0,100% 0,100% 78%,50% 100%,0 78%);box-shadow:inset 0 0 0 2px rgba(247,231,198,.35)}
+
+  /* ---------- Urbanism Tool of the Month ---------- */
+  .totw{margin:24px 0 10px}
+  .totw .bay{padding:34px 34px 30px}
+  .totw-inner{display:grid;grid-template-columns:330px 1fr;gap:30px;align-items:end;position:relative;z-index:2}
+  .pedestal{display:flex;flex-direction:column;align-items:center}
+  .pedestal svg.cup{width:270px;height:auto;filter:drop-shadow(0 16px 16px rgba(40,20,5,.55))}
+  .pedestal .brass{margin-top:-40px;padding:9px 22px;font-size:15px;line-height:1.3;z-index:2}
+  .pedestal .brass small{display:block;font-size:10.5px;letter-spacing:.14em;margin-top:4px;padding-top:4px;border-top:1px solid rgba(58,42,12,.35)}
+  .shelf-line{height:12px;margin:0 -34px;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(200,220,230,.35));box-shadow:0 6px 10px rgba(60,35,12,.35);position:relative;z-index:1}
+  .banner{background:linear-gradient(180deg,var(--navy),var(--navy-2));color:#fff;padding:26px 28px 30px;border-radius:2px;box-shadow:0 14px 26px -12px rgba(0,0,0,.6),inset 0 0 0 2px rgba(242,193,78,.4);clip-path:polygon(0 0,100% 0,100% 100%,52% 94%,0 100%)}
+  .banner .ribbon{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);font-family:var(--display);font-size:14px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:2px}
+  .banner h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.6vw,44px);margin:14px 0 4px;line-height:1.05;text-transform:uppercase;letter-spacing:.02em}
+  .banner .by{font-size:14px;color:rgba(255,255,255,.75);margin:0 0 14px}
+  .banner .by a{color:var(--gold);font-weight:700;text-decoration:none}
+  .banner .by a:hover{text-decoration:underline}
+  .banner p.lede{font-size:16.5px;margin:0 0 16px;color:rgba(255,255,255,.92)}
+  .banner .meta{display:flex;gap:8px;flex-wrap:wrap}
+  .pill{font:700 11px "Fira Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff}
+  .pill.gold{background:rgba(242,193,78,.14);border-color:rgba(242,193,78,.55);color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:11px 18px;border-radius:6px;cursor:pointer;border:0}
+  .btn.gold{background:var(--gold);color:var(--navy)}
+  .btn.gold:hover{background:#ffd36b}
+  .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+  .btn.ghost:hover{background:rgba(255,255,255,.1)}
+  .banner .next{margin:8px 0 0;font-size:13px;color:rgba(255,255,255,.7);letter-spacing:.02em}
+  .banner .next a{color:var(--gold);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(242,193,78,.5)}
+  .banner .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+
+  /* ---------- Toolbar ---------- */
+    .search{flex:1;min-width:220px;position:relative}
+  .search input{width:100%;font:500 15px "Fira Sans",sans-serif;padding:12px 14px 12px 40px;border-radius:10px;border:1px solid #D6E0EA;background:#fff;color:var(--navy);outline:none}
+  .search input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,28,69,.12)}
+  .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--muted)}
+  .count{font:700 12px "Fira Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  /* ---------- Case sections ---------- */
+  section.case{margin:44px 0 0;scroll-margin-top:16px}
+  .case .bay{padding:0 22px}
+  .case .pennant-row{display:flex;justify-content:center;padding-top:16px;position:relative;z-index:4}
+  .case .pennant span{font-size:clamp(18px,2.4vw,26px);padding:12px 34px 26px;min-width:280px}
+  .case-desc{text-align:center;color:#3a2410;font-size:13.5px;font-weight:600;margin:12px auto 0;max-width:560px;position:relative;z-index:4;text-shadow:0 1px 0 rgba(255,240,210,.5)}
+  .shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;padding:26px 0 34px;position:relative;z-index:2}
+  .shelf::after{content:"";position:absolute;left:-22px;right:-22px;bottom:0;height:12px;background:linear-gradient(180deg,rgba(255,255,255,.8),rgba(190,210,222,.45));box-shadow:0 6px 10px rgba(60,35,12,.35)}
+
+  /* ---------- Plaque cards ---------- */
+  .plaque{position:relative;border-radius:6px;padding:10px;display:flex;flex-direction:column;box-shadow:0 12px 20px -10px rgba(40,20,5,.75),inset 0 1px 0 rgba(255,255,255,.18),inset 0 -2px 0 rgba(0,0,0,.35);transition:transform .18s ease,box-shadow .18s ease}
+  .plaque:hover{transform:translateY(-4px);box-shadow:0 20px 28px -12px rgba(40,20,5,.85),inset 0 1px 0 rgba(255,255,255,.18)}
+  .plaque .brass.name{padding:9px 14px;font-size:17px;line-height:1.15;margin-bottom:8px}
+  .plaque .face{background:var(--cream);border-radius:3px;padding:14px 15px 13px;flex:1;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px rgba(122,78,38,.25)}
+  .plaque .top{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+  .plaque .icon{flex:none;width:40px;height:40px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(160deg,var(--navy),#2a3478);color:var(--gold)}
+  .plaque .icon svg{width:22px;height:22px}
+  .plaque .maker{font-size:12px;color:var(--muted);line-height:1.3}
+  .plaque .maker b{color:var(--ink);font-weight:600;display:block;font-size:13px}
+  .plaque p{margin:0 0 12px;font-size:14px;flex:1}
+  .for{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;padding-bottom:10px;border-bottom:1px dashed #DCCBAE}
+  .for span{font:600 11px "Fira Sans",sans-serif;padding:3px 8px;border-radius:999px;background:#EFE5D2;color:#5a4128}
+  .for span.k{background:none;padding-left:0;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-weight:700;font-size:10px;align-self:center}
+  .plaque .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .plaque .free{font:800 11px "Fira Sans",sans-serif;letter-spacing:.14em;color:var(--green)}
+  .plaque .free.paid{color:#A0611A}
+  .plaque .open{white-space:nowrap;font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:2px solid var(--gold)}
+  .plaque .open:hover{color:#000}
+  .plaque .ct-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:11px;padding:4px 14px;z-index:3}
+
+  /* mini award trophy */
+  .award{margin-left:auto;flex:none;display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 4px 4px rgba(40,20,5,.35))}
+  .award svg{width:38px;height:auto}
+  .award .brass{font-size:9.5px;padding:2px 9px;margin-top:-4px;letter-spacing:.05em;line-height:1.2}
+  .award .brass::before,.award .brass::after{display:none}
+
+  .empty{color:#3a2410;text-align:center;padding:30px 0 40px;font-size:14px;grid-column:1/-1}
+
+  /* ---------- Directory ---------- */
+  .directory{margin:30px 0 0;scroll-margin-top:16px;background:#E4EAF0;border-radius:14px;padding:26px 28px;box-shadow:0 10px 30px -20px rgba(11,15,42,.35)}
+  .directory h2{margin:0 0 4px;font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+  .dir-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+  .dir-head p{margin:0;color:var(--muted);font-size:14px}
+  .directory .search{margin-bottom:20px}
+  .dir-grid li{transition:background .15s, opacity .15s}
+  .dir-grid li.hit{background:#FFF4D2;box-shadow:inset 3px 0 0 var(--gold);padding-left:10px;margin-left:-10px;padding-right:6px}
+  .dir-grid li.hit a{color:var(--navy);font-weight:700}
+  .dir-grid li.dim{opacity:.35}
+  .dir-grid li .go{font:800 15px "Fira Sans",sans-serif;color:var(--navy);display:none}
+  .dir-grid li.hit .go{display:inline}
+  .dir-grid li.hit small{display:none}
+  .no-hits{grid-column:1/-1;color:var(--muted);font-size:14px;margin:0}
+  .dir-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .dir-grid h4{margin:0 0 8px;font-family:var(--display);font-weight:400;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);display:flex;justify-content:space-between;border-bottom:2px solid var(--navy);padding-bottom:6px}
+  .dir-grid h4 span{color:var(--muted);white-space:nowrap;margin-left:8px}
+  .dir-grid ul{list-style:none;margin:0;padding:0}
+  .dir-grid li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #CFD8E3;font-size:14px}
+  .dir-grid li{cursor:pointer}
+  .dir-grid li a{color:var(--ink);text-decoration:none;font-weight:500}
+  .dir-grid li a:hover{color:var(--navy);text-decoration:underline}
+  .dir-grid li small{font:800 10px "Fira Sans",sans-serif;letter-spacing:.14em;color:var(--green)}
+
+  /* ---------- Submit ---------- */
+  .nominate{margin:30px 0 0;background:#E4EAF0;color:var(--navy);border-radius:14px;overflow:hidden;scroll-margin-top:16px;box-shadow:inset 0 0 0 1px #D3DCE6}
+  .nominate summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:20px 26px;gap:12px}
+  .nominate summary::-webkit-details-marker{display:none}
+  .nominate summary h3{margin:0;font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
+  .nominate summary p{margin:2px 0 0;color:var(--ink);font-size:14px}
+  .nominate summary .tog{font:800 12px "Fira Sans",sans-serif;letter-spacing:.14em;color:var(--navy)}
+  .nominate form{position:relative;padding:0 26px 26px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .nominate label{display:flex;flex-direction:column;gap:6px;font:600 13px "Fira Sans",sans-serif;color:var(--ink)}
+  .nominate label.full{grid-column:1/-1}
+  .nominate input,.nominate select,.nominate textarea{font:500 14px "Fira Sans",sans-serif;padding:10px 12px;border-radius:8px;border:1px solid #C5CCD8;background:#fff;color:var(--navy);outline:none}
+  .nominate input:focus,.nominate select:focus,.nominate textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,28,69,.12)}
+  .nominate textarea{min-height:80px;resize:vertical}
+  .nominate .note{grid-column:1/-1;font-size:12px;color:var(--muted)}
+  .nominate .btn.gold{background:var(--navy);color:#fff}
+  .nominate .ok{grid-column:1/-1;background:#fff;border:1px solid #C5CCD8;color:var(--navy);padding:10px 12px;border-radius:8px;font-size:14px;display:none}
+
+  footer.appeal{margin-top:60px;background:var(--navy);color:rgba(255,255,255,.82);text-align:center;padding:48px 24px 40px}
+  footer.appeal p{font-size:18px;max-width:700px;margin:0 auto 22px}
+  footer.appeal strong{color:#fff}
+  footer.appeal .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+  footer.appeal .fbtn{font:600 18px "Fira Sans",sans-serif;padding:13px 22px;border-radius:8px;background:var(--gold);color:var(--navy);text-decoration:none;border:1.5px solid var(--gold)}
+  footer.appeal .fbtn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+  footer.appeal .fbtn:hover{opacity:.9}
+  footer.appeal .fine{font-size:13px;color:rgba(255,255,255,.55)}
+  footer.appeal .fine a{color:var(--gold)}
+
+  .hidden{display:none !important}
+
+  @media (max-width:860px){
+    .totw-inner{grid-template-columns:1fr;gap:18px}
+    .pedestal svg.cup{width:140px}
+    .totw .bay{padding:26px 18px 24px}
+    .shelf-line{margin:0 -18px}
+    .nominate form{grid-template-columns:1fr}
+    .case .pennant span{min-width:0}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1 class="brand"><a href="https://www.collegetowns.org/">College Towns</a></h1>
+  <p class="sub"><b>Urbanism Tool</b> Trophy Case</p>
+  <nav class="cases" id="caseNav" aria-label="Trophy cases">
+    <button class="on" data-case="all">All Cases</button>
+    <button data-case="housing">Housing &amp; Building</button>
+    <button data-case="maps">Maps &amp; Data</button>
+    <button data-case="games">Games &amp; Sims</button>
+    <button data-case="community">Community &amp; Archives</button>
+    <button class="dir" data-jump="directory">Directory ↓</button>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <div class="intro-bar">
+    <p>The Urbanism Tool Trophy Case is a repository for urbanism tools, apps, and services that are useful to the broader movement of building and improving our neighborhoods and cities. In recognition of new AI and other innovations that have given us tools to help us make our places better, College Towns scours the internet to curate these all in one place for your convenience. <a href="#nominate" class="open-nom">Submit your own.</a></p>
+    <div class="powered">Curated by <a href="https://www.collegetowns.org/">College Towns</a> · Part of the <a href="https://applocker.collegetowns.org/">App Locker</a> · Urbanism Wing</div>
+  </div>
+
+  <!-- ===== Urbanism Tool of the Month ===== -->
+  <section class="totw" aria-labelledby="totw-title">
+    <div class="cabinet oak">
+      <div class="cornice oak"><span class="tag">URBANISM TOOL OF THE MONTH</span></div>
+      <div class="bay oak-v" style="background-color:#C99460">
+        <div class="lightbar"></div><div class="lightwash"></div><div class="glare"></div>
+        <div class="totw-inner">
+          <div class="pedestal" aria-hidden="true">
+            <svg class="cup" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gold" x1="0" x2="1">
+                  <stop offset="0" stop-color="#9C7322"/><stop offset=".28" stop-color="#F6DC8E"/>
+                  <stop offset=".5" stop-color="#E7B94E"/><stop offset=".78" stop-color="#F9E6A8"/><stop offset="1" stop-color="#8A6420"/>
+                </linearGradient>
+                <linearGradient id="goldV" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#FBE9B0"/><stop offset="1" stop-color="#A97A24"/>
+                </linearGradient>
+              </defs>
+              <path d="M44 42 C8 42 6 98 54 108" fill="none" stroke="url(#goldV)" stroke-width="10" stroke-linecap="round"/>
+              <path d="M156 42 C192 42 194 98 146 108" fill="none" stroke="url(#goldV)" stroke-width="10" stroke-linecap="round"/>
+              <path d="M38 26 H162 C162 96 136 128 100 132 C64 128 38 96 38 26 Z" fill="url(#gold)"/>
+              <rect x="34" y="20" width="132" height="10" rx="4" fill="url(#goldV)"/>
+              <g fill="#7a5a18" opacity=".55">
+                <rect x="64" y="76" width="10" height="22"/><rect x="77" y="64" width="12" height="34"/>
+                <rect x="92" y="54" width="14" height="44"/><path d="M99 46 l3 8 h-6z"/>
+                <rect x="109" y="68" width="11" height="30"/><rect x="123" y="80" width="10" height="18"/>
+                <rect x="60" y="98" width="78" height="3"/>
+              </g>
+              <path d="M92 132 H108 L112 162 H88 Z" fill="url(#gold)"/>
+              <ellipse cx="100" cy="164" rx="26" ry="6" fill="url(#goldV)"/>
+              <rect x="62" y="168" width="76" height="20" rx="2" fill="#2A1A0E"/>
+              <rect x="52" y="186" width="96" height="30" rx="2" fill="#3E2716"/>
+              <rect x="52" y="186" width="96" height="3" fill="#6d4729"/>
+              <path d="M60 34 C62 70 72 98 86 116" stroke="#fff" stroke-opacity=".55" stroke-width="5" fill="none" stroke-linecap="round"/>
+            </svg>
+            <div class="brass">Urbanism Tool of the Month<br>November 2026<small>Awarded by College Towns</small></div>
+          </div>
+
+          <div class="banner">
+            <span class="ribbon">★ Urbanism Tool of the Month</span>
+            <h2 id="totw-title">Urbanism Tool Trophy Case</h2>
+            <p class="by">Created by <a href="https://www.collegetowns.org/">College Towns</a></p>
+            <p class="lede">The first trophy goes to the trophy case itself. Zoning maps, ADU plans, land value visualizers, city-builder games and more, gathered in one place so you don't have to hunt for them.</p>
+            <div class="meta">
+              <span class="pill gold">Free</span>
+              <span class="pill">For everyone</span>
+              <span class="pill">New winner every month</span>
+            </div>
+            <div class="actions" style="margin-bottom:12px">
+              <a class="btn gold" href="#cases">Browse the cases ↓</a>
+              <a class="btn ghost" href="https://www.collegetowns.org/">Read College Towns →</a>
+              <a class="btn ghost open-nom" href="#nominate">Submit a tool</a>
+            </div>
+            <p class="next" id="pastWinners"></p>
+            <p class="next">Up next in December: <a href="#" data-goto="t-pre-approved-adu-plans">Pre-Approved ADU Plans</a></p>
+          </div>
+        </div>
+        <div class="shelf-line"></div>
+      </div>
+      <div class="plinth oak"><span>U-201 · November 2026</span><span class="lock">Urbanism Wing</span></div>
+    </div>
+  </section>
+
+  <section class="directory" id="directory">
+    <div class="dir-head">
+      <div>
+        <h2>Directory</h2>
+        <p>Every trophy, by case. Search to light them up, then click one to jump to its case.</p>
+      </div>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search the trophies: ADU, zoning, transit, land value…" aria-label="Search tools">
+    </div>
+    <div class="dir-grid" id="dirGrid"></div>
+  </section>
+
+  <div id="cases"></div>
+  <div id="casesWrap"></div>
+
+  <details class="nominate" id="nominate">
+    <summary>
+      <div>
+        <h3>Submit Your Own</h3>
+        <p>Built something, or found an app, map or service the movement should know about? Put it up for a trophy.</p>
+      </div>
+      <span class="tog">OPEN ▾</span>
+    </summary>
+    <form id="nomForm">
+      <label>Tool name*<input name="name" required placeholder="e.g. Close"></label>
+      <label>Link*<input name="url" required type="url" placeholder="https://"></label>
+      <label>Which case?
+        <select name="case">
+          <option>Housing &amp; Building</option><option>Maps &amp; Data</option>
+          <option>Games &amp; Sims</option><option>Community &amp; Archives</option><option>Not sure</option>
+        </select>
+      </label>
+      <label>Did you make it?
+        <select name="mine"><option>No, just a fan</option><option>Yes, I built it</option></select>
+      </label>
+      <label class="full">Why does it deserve a trophy?<textarea name="why" placeholder="What does it do, and who is it for?"></textarea></label>
+      <label>Your name (optional)<input name="who"></label>
+      <label>Your email (optional, for a reply)<input name="email" type="email"></label>
+      <input name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <div><button class="btn gold" type="submit">Submit</button></div>
+      <div class="ok" id="nomOk"></div>
+    </form>
+  </details>
+
+</main>
+
+<footer class="appeal">
+  <p>If you appreciate the Trophy Case, please <strong>subscribe to College Towns</strong>, where all content is free. If you really appreciate us, consider donating to the <strong>College Towns Research Grant (CTRG)</strong>.</p>
+  <div class="btns">
+    <a class="fbtn" href="https://www.collegetowns.org/subscribe">Subscribe for free</a>
+    <a class="fbtn ghost" href="https://www.collegetowns.org/about">Support the CTRG</a>
+  </div>
+  <div class="fine">
+    Tools are made by their respective creators and curated by College Towns, where urbanism meets higher education.<br>
+    <a href="https://www.collegetowns.org/">collegetowns.org</a> · Header type: Versa by James Lewis
+  </div>
+</footer>
+
+<script>
+const ICONS = {
+  adu:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 12l6-5 6 5v8H2z"/><path d="M14 14l4-3 4 3v6h-8"/></svg>',
+  reuse:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l3 4h-2v4h-2V7H9z"/><path d="M5 21V11l7-4 7 4v10"/><path d="M10 21v-5h4v5"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  bars:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20h16"/><path d="M6 20v-6M10 20V8M14 20v-9M18 20V4"/></svg>',
+  lens:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h7v7H4z" stroke-dasharray="2 2"/><circle cx="15" cy="15" r="5"/><path d="M19 19l3 3"/></svg>',
+  hex:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8 4.5v9L12 20l-8-4.5v-9z"/><path d="M12 11l8-4.5M12 11v9M12 11L4 6.5"/></svg>',
+  zone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="5"/><rect x="13" y="10" width="8" height="11"/><rect x="3" y="13" width="8" height="8"/></svg>',
+  game:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 10v5M4.5 12.5h5"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>',
+  pixel:'<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="12" width="4" height="9"/><rect x="8" y="6" width="4" height="15"/><rect x="13" y="9" width="4" height="12"/><rect x="18" y="14" width="3" height="7"/><rect x="9" y="3" width="2" height="3"/></svg>',
+  sim:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 20h18"/><path d="M5 20V10h5v10M14 20V6h5v14"/><path d="M7 13h1M7 16h1M16 9h1M16 12h1M16 15h1"/></svg>',
+  people:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><path d="M14 20c0-2.5 1.3-4.5 3-4.5s4 1.8 4 4.5"/></svg>',
+  book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 4h6a2 2 0 012 2v14a2 2 0 00-2-2H4z"/><path d="M20 4h-6a2 2 0 00-2 2v14a2 2 0 012-2h6z"/></svg>',
+  trophy:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 01-10 0z"/><path d="M7 6H4a3 3 0 003 4M17 6h3a3 3 0 01-3 4"/><path d="M12 14v3M8 21h8M9 17h6v4H9z"/></svg>',
+  stairs:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 21h4v-4h4v-4h4V9h4V5h2"/><path d="M3 21h18"/></svg>',
+  kitchen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><path d="M9.5 7v3a2.5 2.5 0 005 0V7M12 7v7"/></svg>',
+  key:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="14" r="4"/><path d="M11 11l9-9M17 5l3 3M15 7l2 2"/></svg>'
+};
+const MINI_CUP = '<svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mg" x1="0" x2="1"><stop offset="0" stop-color="#9C7322"/><stop offset=".35" stop-color="#F6DC8E"/><stop offset=".7" stop-color="#E7B94E"/><stop offset="1" stop-color="#8A6420"/></linearGradient></defs><path d="M14 12C2 12 2 30 17 32M46 12C58 12 58 30 43 32" fill="none" stroke="#D9A93F" stroke-width="3.5" stroke-linecap="round"/><path d="M12 7h36c0 22-8 31-18 32C20 38 12 29 12 7z" fill="url(#mg)"/><path d="M27 39h6l1.5 9h-9z" fill="url(#mg)"/><rect x="18" y="48" width="24" height="7" rx="1" fill="#3E2716"/><rect x="15" y="55" width="30" height="9" rx="1" fill="#2A1A0E"/><path d="M18 11c1 10 4 17 8 21" stroke="#fff" stroke-opacity=".55" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+
+const CT = 'https://www.collegetowns.org/p/';
+// Urbanism Tool of the Month winners, newest first. Add one line each month.
+const WINNERS = [
+  {month:'Nov 2026', name:'Urbanism Tool Trophy Case'},
+  {month:'Oct 2026', name:'Single Stair Simulator'}
+];
+const CASES = [
+  {id:'housing',  code:'U-201-A', name:'Housing & Building',   desc:'Plans, programs and places for adding homes to the neighborhoods we already have.'},
+  {id:'maps',     code:'U-201-B', name:'Maps & Data',          desc:'Interactive maps and data tools that show how our cities actually work.'},
+  {id:'games',    code:'U-201-C', name:'Games & Sims',         desc:'Play city planner. Some of these are toys, some are teaching tools, most are both.'},
+  {id:'community',code:'U-201-D', name:'Community & Archives', desc:'Networks for builders and archives for the people writing about them.'}
+];
+
+const TOOLS = [
+  // Housing & Building
+  {case:'housing', name:'Pre-Approved ADU Plans', kw:'accessory dwelling unit backyard cottage granny flat permit housing california nyc', maker:'A-du', icon:'adu',
+   url:'https://a-du.homes/build',
+   desc:'Because government websites are so annoying. One searchable catalog of about 265 pre-approved ADU designs pulled from city and county programs, mostly in California plus NYC. Filter by bedrooms, size, prefab, ADA access and eco-friendly options, with estimated build costs and a "test fit" for your lot.',
+   for:['Homeowners','Builders'], price:'FREE',},
+  {case:'housing', name:'Single Stair Simulator', kw:'single stair building code apartments family-sized housing pro forma policy north carolina simulator', maker:'Single Stair North Carolina & Build Better Places', icon:'stairs',
+   url:'https://claude.ai/artifact/Jt12bHAzPF2PJznj8rrLNW',
+   desc:'Pick a lot, choose how many stories and apartments you want, and watch the building take shape. See whether it could be built with one stair under the proposed reform, how its numbers compare with the two-stair corridor version required today, and which policy levers would get it built.',
+   for:['Advocates','Builders','Policymakers'], price:'FREE'},
+  {case:'housing', name:'Airbnb Housing Accelerator', kw:'adu housing development homeowners', maker:'Airbnb', icon:'key',
+   url:'https://www.airbnb.com/e/housingaccelerator',
+   desc:'Airbnb\'s move into the housing development game, pitched as a way to make better use of existing space and ride the ADU boom.',
+   for:['Homeowners','Developers'], price:'SERVICE',},
+
+  // Maps & Data
+  {case:'maps', name:'National Zoning Atlas', kw:'zoning land use regulations housing map', maker:'Legal Constructs Lab, Cornell', icon:'zone',
+   url:'https://www.zoningatlas.org/',
+   desc:'Translates thousands of local zoning codes into one standardized, easy-to-read map, so you can see what can actually be built where.',
+   for:['Advocates','Planners','Researchers'], price:'FREE',},
+  {case:'maps', name:'Close', kw:'walkability 15-minute city transit bike amenities travel time map', maker:'Henry Spatial Analysis', icon:'clock',
+   url:'https://close.city/',
+   desc:'A travel-time map for every block in the US. Pick the amenities that matter to you (groceries, parks, libraries, transit) and see how far they are on foot, by bike or by transit.',
+   for:['Movers','Planners','Everyone'], price:'FREE',},
+  {case:'maps', name:'CivicMapper', kw:'land value tax lvt parcels 3d map vacant parking', maker:'Center for Land Economics', icon:'bars',
+   url:'https://www.civicmapper.org/',
+   desc:'3D maps that turn every parcel\'s land value into an extruded bar, plus layers that flag vacant and underused land. The fastest way to show where a city\'s value really is.',
+   for:['Advocates','Journalists','Policymakers'], price:'FREE',},
+  {case:'maps', name:'Metro Lens', kw:'transit parking bike map openstreetmap population', maker:'pelmers (open source)', icon:'lens',
+   url:'https://metro.pelmers.com/',
+   desc:'Draw any shape on a map and get the stats: population, bike paths, car parking, bus routes, train stations and parks. Built for scratching the CityNerd itch.',
+   for:['Urbanism nerds','Researchers'], price:'FREE',},
+  {case:'maps', name:'MEHKO Finder', kw:'home kitchen food business mehko microenterprise cooking restaurant california permits small business map', maker:'MEHKO Finder', icon:'kitchen',
+   url:'https://www.mehkofinder.com/',
+   desc:'A map and directory of permitted home kitchens (MEHKOs) across California. Search by city, ZIP or county to find home-cooked food near you, or get permit help to start and list your own.',
+   for:['Eaters','Home cooks','Small business'], price:'FREE'},
+  {case:'maps', name:'Strado', kw:'walkability europe livability map openstreetmap transit', maker:'Independent developer', icon:'hex',
+   url:'https://strado.info/',
+   desc:'Neighborhood livability scores for 50 European cities, built entirely from OpenStreetMap data across 22 kinds of places, from transit stops to grocery stores.',
+   for:['Movers','Travelers'], price:'FREE',},
+
+  // Games & Sims
+  {case:'games', name:'Adaptive Reuse Corner', kw:'adaptive reuse historic preservation churches game voting housing', maker:'College Towns', icon:'reuse', ct:true,
+   url:'https://adaptivereusecorner.collegetowns.org/',
+   desc:'Old buildings, new lives. Vote head-to-head on real converted churches, schools, banks and silos featured in College Towns and build your own rankings.',
+   for:['Everyone'], price:'FREE',},
+  {case:'games', name:'Cityblock', kw:'game city builder street', maker:'eckladen', icon:'game',
+   url:'https://eckladen.itch.io/cityblock',
+   desc:'A city-builder about one single street. Instead of adding lanes, you make small improvements with limited resources. A little rough around the edges, but free.',
+   for:['Gamers','Students'], price:'FREE',},
+  {case:'games', name:'Urban Fabric', kw:'simulator zoning transit bike lanes parking housing game', maker:'Independent developer', icon:'sim',
+   url:'https://urbanfabric.app/',
+   desc:'A free simulator for modeling urban changes: denser housing, better transit, safer sidewalks and bike lanes, less parking. Sketch the street you want.',
+   for:['Advocates','Students'], price:'FREE',},
+  {case:'games', name:'Isometric NYC', kw:'new york map pixel art game', maker:'Andy Coenen', icon:'pixel',
+   url:'https://isometric.nyc/',
+   desc:'A giant, zoomable SimCity-style pixel-art map of all five boroughs. Not a planning tool, exactly, but the best argument yet that cities are beautiful.',
+   for:['Everyone'], price:'FREE',},
+
+  // Community & Archives
+  {case:'community', name:'Urbanism Tool Trophy Case', kw:'directory repository list apps tools tool of the month', maker:'College Towns', icon:'trophy', ct:true,
+   url:'https://urbanismtools.collegetowns.org/',
+   desc:'This very page. A repository for urbanism tools, apps, and services that are useful to the broader movement of building and improving our neighborhoods and cities, with a new Urbanism Tool of the Month.',
+   for:['Everyone'], price:'FREE'},
+  {case:'community', name:'Build Places', kw:'builders developers network community', maker:'Build Places', icon:'people',
+   url:'https://buildplaces.media/',
+   desc:'A platform connecting builders across the country who are contributing to better urbanism. A who\'s who of people actually making places.',
+   for:['Builders','Advocates'], price:'FREE',},
+  {case:'community', name:'Inside Out Library', kw:'archive public domain illustrations history images old photo', maker:'Independent developer', icon:'book',
+   url:'https://insideoutlibrary.com/',
+   desc:'A free search engine for public-domain historical illustrations and diagrams. Great for anyone writing or presenting about the history of cities and buildings.',
+   for:['Writers','Teachers','Researchers'], price:'FREE',}
+];
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+
+function card(t){
+  const badge = t.ct ? '<span class="brass ct-badge">Made by College Towns</span>' : '';
+  const won = WINNERS.find(w=>w.name===t.name);
+  const award = won ? `<div class="award" title="Urbanism Tool of the Month, ${esc(won.month)}. Awarded by College Towns">${MINI_CUP}<span class="brass">${esc(won.month)}</span></div>` : '';
+  return `<article class="plaque walnut" id="t-${slug(t.name)}" >
+    ${badge}
+    <div class="brass name">${esc(t.name)}</div>
+    <div class="face">
+      <div class="top"><div class="icon">${ICONS[t.icon]||ICONS.zone}</div><div class="maker">made by<b>${esc(t.maker)}</b></div>${award}</div>
+      <p>${esc(t.desc)}</p>
+      <div class="for"><span class="k">For</span>${t.for.map(f=>`<span>${esc(f)}</span>`).join('')}</div>
+            <div class="row">
+        <span class="free${t.price==='SERVICE'?' paid':''}">${esc(t.price)}</span>
+        <a class="open" href="${t.url}">Open tool →</a>
+      </div>
+    </div>
+  </article>`;
+}
+
+function render(){
+  document.getElementById('casesWrap').innerHTML = CASES.map(c => {
+    const items = TOOLS.filter(t=>t.case===c.id);
+    return `<section class="case" id="case-${c.id}" data-case="${c.id}">
+      <div class="cabinet oak">
+        <div class="cornice oak"><span class="tag">${c.code}</span></div>
+        <div class="bay oak-v" style="background-color:#C99460">
+          <div class="lightbar"></div><div class="lightwash"></div><div class="glare"></div>
+          <div class="pennant-row"><div class="pennant"><span>${esc(c.name)}</span></div></div>
+          <p class="case-desc">${esc(c.desc)}</p>
+          <div class="shelf">${items.map(card).join('')}<div class="empty hidden">No trophies in this case match your search.</div></div>
+        </div>
+        <div class="plinth oak"><span>${c.code}</span><span class="lock">${items.length} ${items.length===1?'trophy':'trophies'}</span></div>
+      </div>
+    </section>`;
+  }).join('');
+
+  document.getElementById('dirGrid').innerHTML = CASES.map(c => {
+    const items = TOOLS.filter(t=>t.case===c.id);
+    return `<div><h4>${esc(c.name)} <span>${c.code}</span></h4><ul>${
+      items.map(t=>`<li data-id="t-${slug(t.name)}"><a data-target="t-${slug(t.name)}">${esc(t.name)}</a><small>${t.price==='SERVICE'?'SERVICE':'FREE'}</small><span class="go">↓</span></li>`).join('')
+    }</ul></div>`;
+  }).join('') + '<p class="no-hits hidden" id="noHits">No trophies match that yet. Know one? <a href="#nominate" class="open-nom">Submit it.</a></p>';
+}
+
+let activeCase = 'all';
+const HAY = Object.fromEntries(TOOLS.map(t=>['t-'+slug(t.name),
+  (t.name+' '+t.maker+' '+t.desc+' '+t.for.join(' ')+' '+(t.kw||'')).toLowerCase()]));
+function terms(q){ return q.toLowerCase().split(/[,;|]+|\s+(?:or|and)\s+/).map(x=>x.trim().replace(/[.…]+$/,'')).filter(Boolean); }
+function matches(id, ts){
+  const h = HAY[id];
+  return ts.some(t => h.includes(t) || t.split(/\s+/).every(w => h.includes(w)));
+}
+function applyFilters(){
+  // case buttons filter the cases
+  document.querySelectorAll('section.case').forEach(sec=>{
+    sec.classList.toggle('hidden', !(activeCase==='all' || sec.dataset.case===activeCase));
+  });
+  // search lights up the directory
+  const ts = terms(document.getElementById('q').value);
+  let hits = 0;
+  document.querySelectorAll('#dirGrid li').forEach(li=>{
+    const hit = ts.length>0 && matches(li.dataset.id, ts);
+    li.classList.toggle('hit', hit);
+    li.classList.toggle('dim', ts.length>0 && !hit);
+    if(hit) hits++;
+  });
+  document.getElementById('noHits').classList.toggle('hidden', !(ts.length && hits===0));
+  document.getElementById('count').textContent = ts.length ? `${hits} of ${TOOLS.length} match` : `${TOOLS.length} trophies`;
+}
+function goTo(id){
+  const el = document.getElementById(id); if(!el) return;
+  const sec = el.closest('section.case');
+  if(sec.classList.contains('hidden')){
+    activeCase='all';
+    document.querySelectorAll('#caseNav button[data-case]').forEach(x=>x.classList.toggle('on', x.dataset.case==='all'));
+    applyFilters();
+  }
+  el.scrollIntoView({behavior:'smooth', block:'center'});
+  el.animate([{boxShadow:'0 0 0 5px #F2C14E'},{boxShadow:'0 0 0 5px #F2C14E'},{boxShadow:'0 0 0 0 rgba(242,193,78,0)'}],{duration:2200});
+}
+
+render(); applyFilters();
+
+document.getElementById('caseNav').addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  if(b.dataset.jump){ document.getElementById(b.dataset.jump).scrollIntoView({behavior:'smooth'}); return; }
+  document.querySelectorAll('#caseNav button[data-case]').forEach(x=>x.classList.toggle('on', x===b));
+  activeCase = b.dataset.case; applyFilters();
+  document.getElementById('cases').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('q').addEventListener('input', applyFilters);
+
+document.getElementById('dirGrid').addEventListener('click', e=>{
+  const a = e.target.closest('li[data-id]'); if(!a) return;
+  if(e.target.closest('.open-nom')) return;
+  goTo(a.dataset.id);
+});
+document.getElementById('q').addEventListener('keydown', e=>{
+  if(e.key==='Enter'){ const f=document.querySelector('#dirGrid li.hit'); if(f) goTo(f.dataset.id); }
+});
+
+(function(){
+  const past = WINNERS.slice(1);
+  const el = document.getElementById('pastWinners');
+  if(!past.length){ el.remove(); return; }
+  el.innerHTML = 'Past winners: ' + past.map(w=>`<a href="#" data-goto="t-${slug(w.name)}">${esc(w.name)}</a> (${esc(w.month)})`).join(', ');
+})();
+document.querySelectorAll('[data-goto]').forEach(a=>a.addEventListener('click', e=>{ e.preventDefault(); goTo(a.dataset.goto); }));
+const nom = document.getElementById('nominate');
+document.addEventListener('click', e=>{ if(e.target.closest('.open-nom')) nom.open = true; });
+nom.addEventListener('toggle', ()=>{ nom.querySelector('.tog').textContent = nom.open ? 'CLOSE ▴' : 'OPEN ▾'; });
+/* Submit your own: opens the visitor's Gmail or email app with the submission filled in */
+const SUGGEST_TO = "bW9jLmxpYW1nQHJla2NvbHBwYSs1NTVuZWxsYW1uYXly"; /* the inbox address, lightly encoded */
+const decMail = x => { try { return atob(x).split("").reverse().join(""); } catch(e){ return ""; } };
+document.getElementById('nomForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const f = e.target, v = n => f.elements[n].value.trim(), msg = document.getElementById('nomOk');
+  if (v('_gotcha')) return;
+  const to = decMail(SUGGEST_TO);
+  const subject = 'Trophy Case submission: ' + v('name');
+  const body = ['Tool: ' + v('name'), 'Link: ' + v('url'), 'Case: ' + v('case'), 'Made it?: ' + v('mine'),
+    'Why it deserves a trophy: ' + (v('why') || '(not given)'),
+    'Submitted by: ' + (v('who') || '(anonymous)'), 'Reply to: ' + (v('email') || '(not given)')].join('\n');
+  const gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) + '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  const mailto = 'mailto:' + encodeURIComponent(to) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  msg.innerHTML = `Almost done! Open your email, then press <strong>Send</strong>:<br>
+    <a class="btn gold" href="${gmail}" target="_blank" rel="noopener" style="margin:8px 6px 0 0">Send with Gmail &nearr;</a>
+    <a class="btn gold" href="${mailto}" style="margin-top:8px">Send with my email app</a>`;
+  msg.style.display = 'block';
+});
+</script>
+</body>
+</html>
